@@ -1,0 +1,22 @@
+﻿@page "/"
+@inject HttpClient Http
+
+<h3>Data from Spring Boot:</h3>
+
+@if (message is null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <p>@message</p>
+}
+
+@code {
+    private string? message;
+
+    protected override async Task OnInitializedAsync()
+    {
+        message = await Http.GetStringAsync("");
+    }
+}

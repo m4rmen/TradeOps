@@ -1,0 +1,60 @@
+## Build results
+bin/
+obj/
+out/
+dist/
+build/
+
+## VS Code / JetBrains Rider / IDE
+.vscode/
+.idea/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+## Logs
+*.log
+
+## OS generated
+.DS_Store
+Thumbs.db
+
+## NuGet
+*.nupkg
+*.snupkg
+*.nuspec
+*.psmdcp
+packages/
+*.dll
+*.exe
+*.pdb
+*.cache
+*.mdb
+
+## ASP.NET Scaffolding
+ScaffoldingReadMe.txt
+
+## Publish artifacts
+wwwroot/dist/
+wwwroot/build/
+node_modules/
+*.bundle.js
+*.map
+*.gz
+
+## dotnet tools / local
+*.swp
+*.swf
+*.swo
+*.dbmdl
+*.bak
+*.backup
+*.ldf
+*.mdf
+
+## User secrets / local config
+secrets.json
+appsettings.Development.json
+.env
+.env.*

@@ -1,0 +1,28 @@
+@page "/todos"
+@inject HttpClient Http
+
+<h3>Todos</h3>
+
+@if (todos is null)
+{
+    <p>Loading…</p>
+}
+else
+{
+    <ul>
+        @foreach (var t in todos)
+        {
+            <li>@t.title (@(t.done ? "done" : "pending"))</li>
+        }
+    </ul>
+}
+
+@code {
+    record Todo(long id, string title, bool done);
+    List<Todo>? todos;
+
+    protected override async Task OnInitializedAsync()
+    {
+        todos = await Http.GetFromJsonAsync<List<Todo>>("todos");
+    }
+}
